@@ -1,10 +1,10 @@
-# Implementations of Standard Alghorithms and Data Structures in Go
+# Implementations of Standard Algorithms and Data Structures in Go
 
 ## Data structrures
 
 1) Maximum Heap (Example with Priority Queue)
 
-## Sorting Alghorithms
+## Sorting Algorithms
 
 1) Bubble Sort
 2) Insertion Sort
