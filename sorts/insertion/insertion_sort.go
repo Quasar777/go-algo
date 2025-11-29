@@ -1,0 +1,13 @@
+package insertion
+
+func InsertionSort(nums []int) {
+	for i := 1; i < len(nums); i++ {
+		key := nums[i]
+
+		j := i
+		for j > 0 && nums[j-1] > key {
+			nums[j-1], nums[j] = nums[j], nums[j-1]
+			j--
+		}
+	}
+}
