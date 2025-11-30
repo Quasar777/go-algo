@@ -7,7 +7,9 @@ type MaxHeap struct {
 }
 
 func (h *MaxHeap) Build(nums []int) {
-	h.Nums = append(h.Nums, nums...)
+	h.Nums = make([]int, len(nums))
+	copy(h.Nums, nums)
+	
 	size := len(h.Nums)
 
 	lastNodeWithoutLeafIndex := (size / 2) - 1
