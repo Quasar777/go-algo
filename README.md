@@ -11,6 +11,7 @@
 3) Selection Sort
 4) Quick Sort
 5) Merge Sort
+6) Heap Sort
 
 
 ## test example:
