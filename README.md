@@ -14,6 +14,10 @@
 5) Merge Sort
 6) Heap Sort
 
+## Search Algorithms
+
+1) BFS - Breadth First Search
+
 
 ## test example:
 

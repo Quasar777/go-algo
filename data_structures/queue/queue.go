@@ -1,21 +1,21 @@
 package queue
 
-import "fmt"
-
-type Queue struct {
-	Nums []int
+type Queue[T any] struct {
+	Nums []T
 }
 
-func (q *Queue) Enque(val int) {
+func (q *Queue[T]) Enque(val T) {
 	q.Nums = append(q.Nums, val)
 }
 
-func (q *Queue) Deque() (int, error) {
+func (q *Queue[T]) Deque() (T, bool) {
+	var zero T
+
 	if len(q.Nums) == 0 {
-		return 0, fmt.Errorf("queue is empty")
+		return zero, false 
 	}
 
 	val := q.Nums[0]
 	q.Nums = q.Nums[1:]
-	return val, nil
+	return val, true
 }

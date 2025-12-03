@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	qu := &queue.Queue{
+	qu := &queue.Queue[int]{
 		Nums: []int{},
 	}
 
@@ -14,9 +14,10 @@ func main() {
 	qu.Enque(2)
 	qu.Enque(3)
 
-	val, err := qu.Deque()
-	if err != nil {
-		fmt.Println(err)
+	val, ok := qu.Deque()
+	if !ok {
+		fmt.Println("no values")
+		return
 	}
 
 	fmt.Println("dequed:", val)
