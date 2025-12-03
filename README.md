@@ -3,6 +3,7 @@
 ## Data structrures
 
 1) Maximum Heap (Example with Priority Queue)
+2) Queue
 
 ## Sorting Algorithms
 
