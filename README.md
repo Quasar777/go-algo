@@ -5,6 +5,7 @@
 1) Maximum Heap (Example with Priority Queue)
 2) Queue
 3) Stack
+4) Singly Linked List
 
 ## Sorting Algorithms
 
