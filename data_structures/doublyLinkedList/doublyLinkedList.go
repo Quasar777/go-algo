@@ -95,6 +95,7 @@ func (l *DoublyLinkedList) PushAt(index int, val int) bool {
 	prevNode.Next = newNode
 	curNode.Prev = newNode
 	
+	l.len++
 	return  true
 }
 
@@ -120,6 +121,7 @@ func (l *DoublyLinkedList) RemoveAt(index int) bool {
 	curNode.Next = curNode.Next.Next
 	nextNode.Prev = curNode
 
+	l.len--
 	return true
 }
 
@@ -181,6 +183,7 @@ func (l *DoublyLinkedList) PopAt(index int) (int, bool) {
 
 	l.RemoveAt(index)
 	
+	l.len--
 	return result, true
 }
 
