@@ -1,16 +1,16 @@
-package singlelinkedlist
+package singlylinkedlist
 
 type Node struct {
 	Next *Node
 	Value int
 }
 
-type SingleLinkedList struct {
+type SinglyLinkedList struct {
 	head *Node
 	tail *Node
 }
 
-func (l *SingleLinkedList) Push(val int) {
+func (l *SinglyLinkedList) Push(val int) {
 	newNode := &Node{Value: val, Next: nil}
 
 	if l.head == nil {
@@ -23,7 +23,7 @@ func (l *SingleLinkedList) Push(val int) {
 }
 
 // Removes first founded element
-func (l *SingleLinkedList) Remove(val int) bool {
+func (l *SinglyLinkedList) Remove(val int) bool {
 	if l.head == nil {
 		return false
 	}
@@ -56,7 +56,7 @@ func (l *SingleLinkedList) Remove(val int) bool {
 	return true
 }
 
-func (l *SingleLinkedList) Find(val int) bool {
+func (l *SinglyLinkedList) Find(val int) bool {
 	if l.head == nil {
 		return false
 	}
