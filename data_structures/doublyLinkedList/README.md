@@ -1,6 +1,6 @@
 # Doubly Linked List
 
-![App Screenshot](./DoublyLinkedList.png)
+![App Screenshot](../../docs/DoublyLinkedList.png)
 
 ## Using
 
