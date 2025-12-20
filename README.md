@@ -22,6 +22,7 @@
 ## Search Algorithms
 
 1) BFS - Breadth First Search
+2) DFS - Depth First Search
 
 
 ## test example:
