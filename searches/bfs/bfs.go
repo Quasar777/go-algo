@@ -1,26 +1,22 @@
 package bfs
 
-import "github.com/Quasar777/go-algo/data_structures/queue"
-
-func BFS(graph map[rune][]rune, start rune, target rune) bool {
-	visited := make(map[rune]bool)
-	queue := &queue.Queue[rune]{Nums: []rune{}}
-
-	queue.Enque(start)
+func BFS(graph map[rune][]rune, start rune, end rune) bool {
+	visited := make(map[rune]bool) 
 	visited[start] = true
+	queue := []rune{start}
 
-	current, ok := queue.Deque()
-	if current == target { return true}
-	for ok {
-		for _, r := range graph[current] {
-			_, isVisited := visited[r]
-			if !isVisited {
-				queue.Enque(r)
-				visited[r] = true
+	for head := 0; head < len(queue); head++ {
+		node := queue[head]
+
+		for _, neighbour := range graph[node] {
+			if neighbour == end {
+				return true
+			}
+			if !visited[neighbour] {
+				visited[neighbour] = true
+				queue = append(queue, neighbour)
 			}
 		}
-		current, ok = queue.Deque()
-		if current == target {return true}
 	}
 
 	return false
