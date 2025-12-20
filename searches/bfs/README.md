@@ -7,14 +7,15 @@
 1. Init graph as a adjacency map
 
 ```go
-graph := map[rune][]rune{}
-graph['a'] = []rune{'b', 'c'}
-graph['b'] = []rune{'e'}
-graph['c'] = []rune{'d', 'f'}
-graph['d'] = []rune{'e'}
-graph['e'] = []rune{'g'}
-graph['f'] = []rune{'e'}
-graph['g'] = []rune{}
+graph := map[rune][]rune{
+    'a': {'b', 'c'},
+    'b': {'e'},
+    'c': {'d', 'f'},
+    'd': {'e'},
+    'e': {'g'},
+    'f': {'e'},
+    'g': {},
+}
 ```
 ---
 2. Use BFS function
