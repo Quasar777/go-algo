@@ -23,6 +23,7 @@
 
 1) BFS - Breadth First Search
 2) DFS - Depth First Search
+3) Dijkstra algorithm
 
 
 ## test example:
