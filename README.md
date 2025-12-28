@@ -9,6 +9,7 @@
 3) Stack
 4) Singly Linked List
 5) Doubly Linked List
+6) BST - Binary Search Tree
 
 ## Sorting Algorithms
 
