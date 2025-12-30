@@ -1,5 +1,7 @@
 package bst
 
+import "fmt"
+
 type Node struct {
 	Left  *Node
 	Right *Node
@@ -7,18 +9,18 @@ type Node struct {
 }
 
 type BST struct {
-	root *Node
+	Root *Node
 }
 
 func (t *BST) Insert(val int) bool {
 	newNode := &Node{Value: val}
 
-	if t.root == nil {
-		t.root = newNode
+	if t.Root == nil {
+		t.Root = newNode
 		return true
 	}
 
-	curNode := t.root
+	curNode := t.Root
 
 	for {
 		if newNode.Value > curNode.Value {
@@ -40,11 +42,11 @@ func (t *BST) Insert(val int) bool {
 }
 
 func (t *BST) Search(val int) bool {
-	if t.root == nil {
+	if t.Root == nil {
 		return false
 	}
 
-	curNode := t.root
+	curNode := t.Root
 
 	for curNode != nil {
 		if curNode.Value == val {
@@ -58,4 +60,34 @@ func (t *BST) Search(val int) bool {
 	}
 
 	return false
+}
+
+func PrintInOrder(root *Node) {
+	if root == nil {
+		return
+	}
+
+	PrintInOrder(root.Left)
+	fmt.Println(root.Value)
+	PrintInOrder(root.Right)	
+}
+
+func PrintPreOrder(node *Node) {
+	if node == nil {
+		return
+	}
+
+	fmt.Println(node.Value)
+	PrintPreOrder(node.Left)
+	PrintPreOrder(node.Right)
+}
+
+func PrintPostOrder(node *Node) {
+	if node == nil {
+		return
+	}
+
+	PrintPreOrder(node.Left)
+	PrintPreOrder(node.Right)
+	fmt.Println(node.Value)
 }

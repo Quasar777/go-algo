@@ -38,4 +38,14 @@ fmt.Println("root right child right child", bst.root.Right.Right) // null
 fmt.Println("--- --- TESTS --- ---")
 fmt.Println("Search 8 (exists):", bst.Search(8))                   // true
 fmt.Println("Search 35 (doesn't exists):", bst.Search(35))         // false
+
+
+fmt.Println("--- --- IN ORDER TRAVERSE --- ---")
+PrintInOrder(bst.Root)
+
+fmt.Println("--- --- PRE ORDER TRAVERSE --- ---")
+PrintPreOrder(bst.Root)
+
+fmt.Println("--- --- POST ORDER TRAVERSE --- ---")
+PrintPostOrder(bst.Root)
 ```
